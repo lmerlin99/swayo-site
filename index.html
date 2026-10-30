@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Swayo · Better swaps you can trust</title>
+<meta name="description" content="Swayo helps people swap what they already buy for healthier, lower-carbon products, ranked on merit with two scores side by side, and gives brands proof the switch stuck.">
+<meta name="theme-color" content="#565B26">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- Link previews (iMessage, Slack, LinkedIn, X). Once the domain is live, change og-image.png below to the full URL, e.g. https://yourdomain.com/og-image.png -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swayo">
+<meta property="og:title" content="Swayo · Better swaps you can trust">
+<meta property="og:description" content="Swayo helps people swap what they already buy for healthier, lower-carbon products, ranked on merit with two scores side by side, and gives brands proof the switch stuck.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Swayo · Better swaps you can trust">
+<meta name="twitter:description" content="Swayo helps people swap what they already buy for healthier, lower-carbon products, ranked on merit with two scores side by side, and gives brands proof the switch stuck.">
+<meta name="twitter:image" content="og-image.png">
+<style>
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Caveat:wght@600&display=swap">
+<style>
+/* Layout: the Swayo brand system. Oat ground, big soft rounded cards stacked in one column, olive leads, sprout and lemon used as pops. Single light theme by choice, matching the brand one-pager. */
+:root {
+  --olive: #565B26;
+  --sprout: #D6F06B;
+  --lemon: #EEE58E;
+  --oat: #F2EDE1;
+  --deep: #33361A;
+  --ink: #1E2010;
+  --paper: #FFFFFF;
+  --muted: #5B5D45;
+  --on-olive: #E9EBD8;
+  --line: #E2DCCB;
+  --display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand: "Caveat", "Comic Sans MS", cursive;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--oat);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.02em; line-height: 1.08; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; border-radius: 8px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 20px; padding-block: 16px 48px; }
+
+/* Nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 8px; }
+.mark { font-family: var(--display); font-weight: 800; letter-spacing: -0.05em; color: var(--olive); font-size: 30px; line-height: 1; text-decoration: none; }
+.nav ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav a.link { display: inline-block; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--deep); }
+.nav a.link:hover { background: var(--paper); }
+
+/* Cards */
+.card { border-radius: 32px; padding: clamp(24px, 4.5vw, 52px); background: var(--paper); }
+.card.olive { background: var(--olive); color: var(--on-olive); }
+.card.lemon { background: var(--lemon); color: var(--ink); }
+.card.deep { background: var(--deep); color: var(--on-olive); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--olive); }
+.olive .eyebrow, .deep .eyebrow { color: var(--sprout); }
+.hand { font-family: var(--hand); font-weight: 600; letter-spacing: 0; }
+.pill { display: inline-block; border: 1.5px solid currentColor; border-radius: 999px; padding: 5px 14px; font-size: 13px; font-weight: 500; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: clamp(28px, 4vw, 56px); align-items: center; }
+.hero-copy { display: grid; gap: 22px; min-width: 0; }
+.hero .pill { justify-self: start; color: var(--on-olive); }
+.wordmark { font-family: var(--display); font-weight: 800; font-size: clamp(84px, 15vw, 188px); line-height: 0.78; letter-spacing: -0.06em; color: var(--sprout); margin: 6px 0 4px -0.04em; }
+.hero h1 { font-size: clamp(32px, 4.4vw, 50px); color: #FFFFFF; font-weight: 700; }
+.hero .hand { font-size: clamp(28px, 3.4vw, 38px); color: var(--sprout); transform: rotate(-3deg); transform-origin: left; display: inline-block; margin-top: -6px; }
+.hero .lede { font-size: clamp(17px, 1.6vw, 19px); max-width: 46ch; color: var(--on-olive); }
+
+.demo { background: var(--oat); color: var(--ink); border-radius: 30px; padding: clamp(20px, 2.6vw, 28px); display: grid; gap: 14px; min-width: 0; box-shadow: 0 30px 60px -30px rgba(20, 22, 8, 0.55); }
+.demo h2 { font-size: 24px; }
+.search { display: flex; align-items: center; gap: 10px; border: 1.5px solid var(--ink); border-radius: 999px; padding: 10px 16px; background: var(--paper); font-size: 15px; min-width: 0; }
+.search svg { flex: none; }
+.search span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.caret { display: inline-block; width: 1.5px; height: 1.05em; background: var(--ink); margin-left: 1px; vertical-align: -2px; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.tabs { display: flex; gap: 8px; }
+.tabs span { font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 999px; border: 1.5px solid var(--ink); }
+.tabs span:first-child { background: var(--ink); color: var(--oat); }
+.swap { background: var(--paper); border-radius: 22px; padding: 16px; display: grid; gap: 14px; transition: opacity 0.35s ease, transform 0.35s ease; }
+.swap.out { opacity: 0; transform: translateY(6px); }
+.swap-head { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 14px; align-items: center; }
+.leaf { width: 52px; height: 52px; border-radius: 14px; background: var(--sprout); display: grid; place-items: center; color: var(--olive); }
+.swap-head small { display: block; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--olive); }
+.swap-head strong { font-family: var(--display); font-size: 18px; line-height: 1.2; font-weight: 700; display: block; }
+.scores { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.score { border-radius: 14px; padding: 10px 14px; }
+.score small { display: block; font-size: 12px; font-weight: 500; }
+.score b { font-family: var(--display); font-size: 30px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.score b span { font-size: 14px; font-weight: 500; letter-spacing: 0; }
+.score.s1 { background: var(--olive); color: #FFFFFF; }
+.score.s2 { background: var(--lemon); color: var(--ink); }
+.cta { display: block; text-align: center; background: var(--ink); color: var(--sprout); border-radius: 999px; padding: 13px 18px; font-weight: 700; font-size: 15px; }
+.demo-note { font-size: 12px; color: var(--muted); text-align: center; }
+
+/* Mission + values */
+.duo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; }
+.mission { display: grid; gap: 18px; align-content: start; }
+.mission h2 { font-size: clamp(26px, 3vw, 34px); }
+.mission p { color: var(--muted); max-width: 52ch; }
+.values { display: grid; gap: 18px; align-content: start; }
+.values-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.value { background: var(--oat); border-radius: 18px; padding: 16px 18px; display: grid; gap: 4px; align-content: start; }
+.value.pop { background: var(--sprout); }
+.value h3 { font-size: 18px; }
+.value p { font-size: 14px; color: var(--muted); }
+.value.pop p { color: var(--deep); }
+
+/* Problem */
+.problem { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.problem-copy { display: grid; gap: 18px; }
+.problem h2 { font-size: clamp(34px, 4.6vw, 54px); }
+.problem p { color: var(--muted); max-width: 50ch; font-size: 17px; }
+.stats { display: grid; gap: 10px; }
+.stat { display: grid; grid-template-columns: minmax(96px, auto) minmax(0, 1fr); gap: 18px; align-items: center; background: var(--oat); border-radius: 20px; padding: 18px 22px; }
+.stat b { font-family: var(--display); font-size: clamp(38px, 4.4vw, 52px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--olive); font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; color: var(--ink); }
+.stat.dark { background: var(--deep); }
+.stat.dark b { color: var(--sprout); }
+.stat.dark p { color: var(--on-olive); }
+
+/* How it works */
+.how { display: grid; gap: 28px; }
+.how-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.how-head h2 { font-size: clamp(30px, 3.8vw, 44px); }
+.how-head .hand { font-size: 30px; color: var(--olive); transform: rotate(-2deg); }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; list-style: none; margin: 0; padding: 0; }
+.step { background: var(--oat); border-radius: 24px; padding: 22px; display: grid; gap: 10px; align-content: start; }
+.step .n { width: 34px; height: 34px; border-radius: 50%; border: 1.5px solid var(--ink); display: grid; place-items: center; font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+.step h3 { font-size: 21px; }
+.step p { font-size: 15px; color: var(--muted); }
+.step.last { background: var(--olive); color: #FFFFFF; }
+.step.last .n { background: var(--sprout); border-color: var(--sprout); color: var(--ink); }
+.step.last p { color: var(--on-olive); }
+
+/* Scores */
+.score-card { display: grid; gap: 14px; align-content: start; }
+.score-card h2 { font-size: clamp(30px, 3.6vw, 42px); }
+.score-card p { max-width: 44ch; font-size: 17px; }
+.score-card .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.olive.score-card h2 { color: #FFFFFF; }
+.never { text-align: center; font-size: clamp(26px, 3.2vw, 34px); color: var(--olive); margin: -4px 0 4px; }
+
+/* Business model */
+.model { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(24px, 4vw, 56px); align-items: start; }
+.model-copy { display: grid; gap: 18px; }
+.model h2 { font-size: clamp(34px, 4.6vw, 54px); color: #FFFFFF; }
+.model-copy > p { font-size: 17px; max-width: 46ch; }
+.later { display: grid; gap: 10px; margin-top: 6px; }
+.later div { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 12px; font-size: 15px; padding-top: 10px; border-top: 1px solid rgba(233, 235, 216, 0.22); }
+.later dt, .later b { color: var(--sprout); font-weight: 700; }
+.pay { display: grid; gap: 10px; }
+.pay-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.price { border-radius: 24px; padding: 22px; display: grid; gap: 6px; align-content: start; }
+.price b { font-family: var(--display); font-size: clamp(48px, 6vw, 72px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; }
+.price p { font-size: 15px; }
+.price.p1 { background: var(--sprout); color: var(--ink); }
+.price.p2 { background: var(--lemon); color: var(--ink); }
+.vs { background: var(--deep); border-radius: 24px; padding: 20px 22px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; align-items: center; }
+.vs b { font-family: var(--display); font-size: 40px; font-weight: 800; letter-spacing: -0.03em; color: var(--on-olive); text-decoration: line-through; text-decoration-color: var(--sprout); text-decoration-thickness: 3px; }
+.vs p { font-size: 15px; }
+.vs p strong { color: #FFFFFF; }
+
+/* Compare */
+.compare { display: grid; gap: 24px; }
+.compare-head { display: grid; gap: 12px; }
+.compare h2 { font-size: clamp(30px, 3.8vw, 44px); }
+.compare-head p { color: var(--muted); }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; min-width: 520px; border-collapse: separate; border-spacing: 0; font-size: 16px; }
+th, td { padding: 16px 18px; text-align: center; border-bottom: 1px solid var(--line); }
+th:first-child, td:first-child { text-align: left; }
+thead th { font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); vertical-align: bottom; }
+thead th.us { color: var(--sprout); background: var(--olive); border-radius: 20px 20px 0 0; font-family: var(--display); font-size: 22px; letter-spacing: -0.04em; text-transform: none; font-weight: 800; }
+td.us { background: var(--olive); border-bottom-color: rgba(233, 235, 216, 0.2); }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:last-child td.us { border-radius: 0 0 20px 20px; }
+td:first-child { font-weight: 500; }
+.yes, .no { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; }
+.yes { background: var(--sprout); color: var(--olive); }
+.yes.alt { background: var(--oat); color: var(--olive); }
+.no { color: #A9A68F; }
+.table-note { font-size: 13px; color: var(--muted); }
+
+/* Footer band */
+.closing { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.closing h2 { font-size: clamp(30px, 4vw, 46px); color: #FFFFFF; }
+.closing p { margin-top: 10px; max-width: 54ch; }
+.closing .mark { color: var(--sprout); font-size: clamp(48px, 6vw, 72px); }
+.fine { text-align: center; font-size: 13px; color: var(--muted); padding-top: 4px; }
+
+@media (max-width: 900px) {
+  .hero, .duo, .problem, .model { grid-template-columns: minmax(0, 1fr); }
+  .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nav ul { display: none; }
+}
+@media (max-width: 520px) {
+  .steps, .values-grid, .pay-row { grid-template-columns: minmax(0, 1fr); }
+  .card { border-radius: 26px; }
+  .stat { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .vs { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .caret { animation: none; }
+  .swap { transition: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="mark" href="#top" aria-label="Swayo home">swayo</a>
+    <ul>
+      <li><a class="link" href="#how">How it works</a></li>
+      <li><a class="link" href="#scores">Two scores</a></li>
+      <li><a class="link" href="#model">Business model</a></li>
+      <li><a class="link" href="#compare">Why we win</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <header class="card olive hero" id="top">
+    <div class="hero-copy">
+      <span class="pill">A trusted guide to better everyday products</span>
+      <div class="wordmark" aria-hidden="true">swayo</div>
+      <div>
+        <h1>Better swaps you can trust.</h1>
+        <span class="hand">...and actually stick with!</span>
+      </div>
+      <p class="lede">Swayo helps people swap what they already buy for healthier, lower-carbon products, and gives brands proof the switch stuck.</p>
+    </div>
+
+    <div class="demo" aria-label="Example of the Swayo app">
+      <h2>What do you<br>use today?</h2>
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <span><span id="q">laundry detergent</span><i class="caret" aria-hidden="true"></i></span>
+      </div>
+      <div class="tabs" aria-hidden="true"><span>top swaps</span><span>nearby</span></div>
+      <div class="swap" id="swap">
+        <div class="swap-head">
+          <div class="leaf" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 5-13 14-14 0 9-5 14-13 14"/><path d="M5 19 13 11"/></svg>
+          </div>
+          <div><small>Swap #1</small><strong id="swapName">Plant-based laundry sheets</strong></div>
+        </div>
+        <div class="scores">
+          <div class="score s1"><small>Swayo Score</small><b><span id="s1" style="font-size:inherit;font-weight:inherit;letter-spacing:inherit">86</span><span>/100</span></b></div>
+          <div class="score s2"><small>Consumer Score</small><b><span id="s2" style="font-size:inherit;font-weight:inherit;letter-spacing:inherit">4.6</span><span>/5</span></b></div>
+        </div>
+      </div>
+      <span class="cta" aria-hidden="true">Try this swap · cashback</span>
+      <p class="demo-note">Example products and scores, for illustration</p>
+    </div>
+  </header>
+
+  <!-- Mission + values -->
+  <section class="duo" aria-label="Mission">
+    <div class="card mission">
+      <span class="eyebrow">Our mission</span>
+      <h2>Turn good intentions into lasting switches, and give brands proof that they worked.</h2>
+      <p>Most people would choose healthier, lower-carbon products if they had a trustworthy way to find one. Swayo is that unsponsored guide.</p>
+    </div>
+    <div class="card values">
+      <span class="eyebrow">What we stand for</span>
+      <div class="values-grid">
+        <div class="value"><h3>Health first</h3><p>Ingredients you'd feel good about.</p></div>
+        <div class="value"><h3>Lighter footprint</h3><p>Less packaging, lower carbon.</p></div>
+        <div class="value pop"><h3>Never for sale</h3><p>Ranked free, on merit only.</p></div>
+        <div class="value"><h3>Proof over promises</h3><p>Did the switch stick? We check.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="card problem" aria-labelledby="problem-h">
+    <div class="problem-copy">
+      <span class="eyebrow">The problem</span>
+      <h2 id="problem-h">Intent is high. Trust is gone.</h2>
+      <p>Every recommendation is now a paid ad: influencers, sponsored search, AI answers shaped by generative engine optimization. Green claims are vague. People try a swap, get let down and drift back, and none of it is recorded for the next shopper.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>84%</b><p>of consumers call wellness a top priority</p></div>
+      <div class="stat"><b>85%</b><p>of Americans favor brands with sustainable practices</p></div>
+      <div class="stat dark"><b>$54</b><p>median brand cost to win one online customer, with about $23 lost on the first order</p></div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="card how" id="how" aria-labelledby="how-h">
+    <div class="how-head">
+      <h2 id="how-h">How a swap works</h2>
+      <span class="hand">a few taps, that's it</span>
+    </div>
+    <ol class="steps">
+      <li class="step"><span class="n">1</span><h3>Name it</h3><p>Tell us a product you already buy.</p></li>
+      <li class="step"><span class="n">2</span><h3>See ranked swaps</h3><p>Ranked on merit, each with two scores side by side.</p></li>
+      <li class="step"><span class="n">3</span><h3>Try it</h3><p>Often with brand-funded cashback. Then rank it against your old product.</p></li>
+      <li class="step last"><span class="n">4</span><h3>Check in at 30 days</h3><p>Did it stick? Your answer helps everyone who comes next.</p></li>
+    </ol>
+  </section>
+
+  <!-- Two scores -->
+  <section class="duo" id="scores" aria-label="The two scores">
+    <div class="card olive score-card">
+      <span class="eyebrow">Score 01</span>
+      <h2>Swayo Score</h2>
+      <p>How good it is for you and the planet, weighted from a published method.</p>
+      <div class="chips"><span class="pill">ingredient health</span><span class="pill">packaging</span><span class="pill">carbon footprint</span></div>
+    </div>
+    <div class="card lemon score-card">
+      <span class="eyebrow">Score 02</span>
+      <h2>Consumer Score</h2>
+      <p>How it holds up in real life, from people who actually tried it.</p>
+      <div class="chips"><span class="pill">does it work?</span><span class="pill">worth the price?</span><span class="pill">did people keep it?</span></div>
+    </div>
+  </section>
+  <p class="never hand">Always side by side. Never blended into one number.</p>
+
+  <!-- Business model -->
+  <section class="card olive model" id="model" aria-labelledby="model-h">
+    <div class="model-copy">
+      <span class="eyebrow">Business model</span>
+      <h2 id="model-h">Pay per verified switch.</h2>
+      <p>Every qualifying product is ranked for free. Brands pay only to attach switching offers and to receive proof of results.</p>
+      <dl class="later">
+        <div><dt>Year 1</dt><dd style="margin:0">Paid sampling and affiliate commissions</dd></div>
+        <div><dt>Later</dt><dd style="margin:0">Switching-data subscriptions, premium membership, health partnerships, score API</dd></div>
+      </dl>
+    </div>
+    <div class="pay">
+      <div class="pay-row">
+        <div class="price p1"><b>$X</b><p>per verified purchase, by receipt or linked card</p></div>
+        <div class="price p2"><b>+$Y</b><p>if the shopper is still buying the product 30 days later</p></div>
+      </div>
+      <div class="vs">
+        <b>$54</b>
+        <p><strong>A cheaper, measurable alternative</strong> to the median cost brands pay to win one online customer today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compare -->
+  <section class="card compare" id="compare" aria-labelledby="compare-h">
+    <div class="compare-head">
+      <span class="eyebrow">Why we win</span>
+      <h2 id="compare-h">The only one that tracks whether a switch lasts.</h2>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th scope="col">Does it…</th><th scope="col" class="us">swayo</th><th scope="col">Scan apps</th><th scope="col">Cashback apps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Score health and carbon</td><td class="us"><span class="yes" aria-label="Yes">✓</span></td><td><span class="yes alt" aria-label="Yes">✓</span></td><td><span class="no" aria-label="No">—</span></td></tr>
+          <tr><td>Reward the purchase</td><td class="us"><span class="yes" aria-label="Yes">✓</span></td><td><span class="no" aria-label="No">—</span></td><td><span class="yes alt" aria-label="Yes">✓</span></td></tr>
+          <tr><td>Verify the purchase</td><td class="us"><span class="yes" aria-label="Yes">✓</span></td><td><span class="no" aria-label="No">—</span></td><td><span class="yes alt" aria-label="Yes">✓</span></td></tr>
+          <tr><td>Track if it lasts</td><td class="us"><span class="yes" aria-label="Yes">✓</span></td><td><span class="no" aria-label="No">—</span></td><td><span class="no" aria-label="No">—</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Scan apps, e.g. Yuka. Cashback apps, e.g. Ibotta and Fetch.</p>
+  </section>
+
+  <!-- Closing -->
+  <footer class="card deep closing">
+    <div>
+      <h2>Rankings are never for sale.</h2>
+      <p>Every qualifying product is ranked free and on merit. Brands pay for verified switches, never for rank.</p>
+    </div>
+    <span class="mark" aria-hidden="true">swayo</span>
+  </footer>
+  <p class="fine">Swayo · 2026</p>
+</div>
+
+<script>
+(function () {
+  var examples = [
+    { q: "laundry detergent", name: "Plant-based laundry sheets", s1: "86", s2: "4.6" },
+    { q: "paper towels", name: "Reusable bamboo towels", s1: "81", s2: "4.4" },
+    { q: "shower gel", name: "Refillable body wash concentrate", s1: "78", s2: "4.5" }
+  ];
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce) return;
+  var i = 0;
+  var q = document.getElementById("q"), swap = document.getElementById("swap");
+  var nameEl = document.getElementById("swapName"), s1 = document.getElementById("s1"), s2 = document.getElementById("s2");
+  function typeTo(text, done) {
+    var n = 0; q.textContent = "";
+    var t = setInterval(function () {
+      n++; q.textContent = text.slice(0, n);
+      if (n >= text.length) { clearInterval(t); done(); }
+    }, 55);
+  }
+  setInterval(function () {
+    i = (i + 1) % examples.length;
+    var ex = examples[i];
+    swap.classList.add("out");
+    typeTo(ex.q, function () {
+      nameEl.textContent = ex.name; s1.textContent = ex.s1; s2.textContent = ex.s2;
+      swap.classList.remove("out");
+    });
+  }, 4200);
+})();
+</script>
+</body>
+</html>
