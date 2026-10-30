@@ -70,9 +70,11 @@ a { color: inherit; }
 /* Nav */
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 8px; }
 .mark { font-family: var(--display); font-weight: 800; letter-spacing: -0.05em; color: var(--olive); font-size: 30px; line-height: 1; text-decoration: none; }
-.nav ul { display: flex; gap: 6px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.nav ul { display: flex; gap: 6px; list-style: none; margin: 0 0 0 auto; padding: 0; flex-wrap: wrap; }
 .nav a.link { display: inline-block; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--deep); }
 .nav a.link:hover { background: var(--paper); }
+.nav a.nav-cta { flex: none; text-decoration: none; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 999px; background: var(--olive); color: var(--sprout); }
+.nav a.nav-cta:hover { background: var(--deep); }
 
 /* Cards */
 .card { border-radius: 32px; padding: clamp(24px, 4.5vw, 52px); background: var(--paper); }
@@ -242,6 +244,7 @@ td:first-child { font-weight: 500; }
       <li><a class="link" href="#model">Business model</a></li>
       <li><a class="link" href="#compare">Why we win</a></li>
     </ul>
+    <a class="nav-cta" href="contact.html">Contact us</a>
   </nav>
 
   <!-- Hero -->
