@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Swayo</title>
+<meta name="description" content="Get in touch with Swayo. Send us a message and we'll reply from hello@swayo.ai.">
+<meta name="theme-color" content="#565B26">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Swayo">
+<meta property="og:title" content="Contact · Swayo">
+<meta property="og:description" content="Get in touch with Swayo. Send us a message and we'll reply from hello@swayo.ai.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.png">
+<style>
+html { -webkit-text-size-adjust: 100%; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+body { margin: 0; }
+[hidden] { display: none !important; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Caveat:wght@600&display=swap">
+<style>
+/* Same brand tokens and nav as index.html. */
+:root {
+  --olive: #565B26;
+  --sprout: #D6F06B;
+  --lemon: #EEE58E;
+  --oat: #F2EDE1;
+  --deep: #33361A;
+  --ink: #1E2010;
+  --paper: #FFFFFF;
+  --muted: #5B5D45;
+  --on-olive: #E9EBD8;
+  --line: #E2DCCB;
+  --error: #9A3412;
+  --display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+  --body: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand: "Caveat", "Comic Sans MS", cursive;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--oat);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance; letter-spacing: -0.02em; line-height: 1.08; }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--olive); outline-offset: 3px; border-radius: 8px; }
+
+.wrap { max-width: 1120px; margin: 0 auto; display: grid; gap: 20px; padding-block: 16px 48px; }
+
+/* Nav */
+.nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 8px; }
+.mark { font-family: var(--display); font-weight: 800; letter-spacing: -0.05em; color: var(--olive); font-size: 30px; line-height: 1; text-decoration: none; }
+.nav ul { display: flex; gap: 6px; list-style: none; margin: 0 0 0 auto; padding: 0; flex-wrap: wrap; }
+.nav a.link { display: inline-block; text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 14px; border-radius: 999px; color: var(--deep); }
+.nav a.link:hover { background: var(--paper); }
+.nav a.nav-cta { flex: none; text-decoration: none; font-size: 14px; font-weight: 700; padding: 9px 18px; border-radius: 999px; background: var(--olive); color: var(--sprout); }
+.nav a.nav-cta:hover { background: var(--deep); }
+
+/* Cards */
+.card { border-radius: 32px; padding: clamp(24px, 4.5vw, 52px); background: var(--paper); }
+.card.olive { background: var(--olive); color: var(--on-olive); }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--olive); }
+.olive .eyebrow { color: var(--sprout); }
+.hand { font-family: var(--hand); font-weight: 600; letter-spacing: 0; }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 20px; align-items: stretch; }
+.intro { display: grid; gap: 22px; align-content: start; }
+.intro h1 { font-size: clamp(44px, 6vw, 76px); color: #FFFFFF; font-weight: 800; letter-spacing: -0.04em; }
+.intro .hand { font-size: clamp(26px, 3vw, 34px); color: var(--sprout); transform: rotate(-3deg); transform-origin: left; display: inline-block; margin-top: -10px; }
+.intro p { font-size: 17px; max-width: 40ch; }
+.direct { margin-top: 8px; padding-top: 18px; border-top: 1px solid rgba(233, 235, 216, 0.22); display: grid; gap: 4px; font-size: 15px; }
+.direct a { color: var(--sprout); font-weight: 700; font-size: 18px; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+
+.form { display: grid; gap: 18px; align-content: start; }
+.form h2 { font-size: clamp(26px, 3vw, 34px); }
+.field { display: grid; gap: 6px; }
+.field label { font-size: 14px; font-weight: 700; }
+.field input, .field textarea {
+  font: inherit; color: var(--ink); background: var(--oat);
+  border: 1.5px solid transparent; border-radius: 16px; padding: 13px 16px; width: 100%;
+}
+.field textarea { min-height: 160px; resize: vertical; }
+.field input:focus, .field textarea:focus { outline: none; border-color: var(--olive); background: var(--paper); }
+.field input:user-invalid, .field textarea:user-invalid { border-color: var(--error); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.submit {
+  justify-self: start; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer;
+  background: var(--ink); color: var(--sprout); border: 0; border-radius: 999px; padding: 14px 28px;
+}
+.submit:hover { background: var(--olive); }
+.submit:disabled { opacity: 0.6; cursor: progress; }
+.status { font-size: 15px; }
+.status.error { color: var(--error); }
+.sent { display: grid; gap: 14px; align-content: start; }
+.sent h2 { font-size: clamp(30px, 3.6vw, 42px); }
+.sent p { color: var(--muted); max-width: 44ch; }
+.sent a { font-weight: 700; color: var(--olive); }
+
+.fine { text-align: center; font-size: 13px; color: var(--muted); padding-top: 4px; }
+
+@media (max-width: 900px) {
+  .contact { grid-template-columns: minmax(0, 1fr); }
+  .nav ul { display: none; }
+}
+@media (max-width: 520px) {
+  .card { border-radius: 26px; }
+  .submit { justify-self: stretch; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="mark" href="index.html" aria-label="Swayo home">swayo</a>
+    <ul>
+      <li><a class="link" href="index.html#how">How it works</a></li>
+      <li><a class="link" href="index.html#scores">Two scores</a></li>
+      <li><a class="link" href="index.html#model">Business model</a></li>
+      <li><a class="link" href="index.html#compare">Why we win</a></li>
+    </ul>
+    <a class="nav-cta" href="contact.html" aria-current="page">Contact us</a>
+  </nav>
+
+  <main class="contact">
+    <section class="card olive intro" aria-labelledby="contact-h">
+      <span class="eyebrow">Contact us</span>
+      <div>
+        <h1 id="contact-h">Say hello.</h1>
+        <span class="hand">we read every message</span>
+      </div>
+      <p>Whether you're a shopper with a swap to suggest, a brand that wants proof a switch stuck, or just curious, we'd love to hear from you.</p>
+      <div class="direct">
+        <span>Prefer email?</span>
+        <a href="mailto:hello@swayo.ai">hello@swayo.ai</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <!-- Messages are relayed to hello@swayo.ai by FormSubmit (formsubmit.co). The first submission sends a one-time activation email to that inbox. -->
+      <form class="form" id="contact-form" action="https://formsubmit.co/hello@swayo.ai" method="POST">
+        <h2>Send us a message</h2>
+        <input type="hidden" name="_subject" value="New message from swayo.ai">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://swayo.ai/contact.html?sent=1">
+        <div class="hp" aria-hidden="true"><label>Leave this empty <input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required maxlength="120">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="200">
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required maxlength="5000"></textarea>
+        </div>
+        <button class="submit" type="submit">Send message</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="sent" id="sent" hidden tabindex="-1">
+        <span class="eyebrow">Message sent</span>
+        <h2>Thanks, we got it.</h2>
+        <p>We'll get back to you at the email you gave us, usually within a couple of days.</p>
+        <p><a href="index.html">Back to the home page</a></p>
+      </div>
+    </section>
+  </main>
+
+  <p class="fine">Swayo · 2026</p>
+</div>
+
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  var sent = document.getElementById("sent");
+  var status = document.getElementById("status");
+  var button = form.querySelector(".submit");
+
+  function showSent() {
+    form.hidden = true;
+    sent.hidden = false;
+    sent.focus();
+  }
+
+  // Landing back here after the no-JS fallback redirect.
+  if (new URLSearchParams(location.search).get("sent") === "1") showSent();
+
+  // With JS, send in the background and stay on the page.
+  form.addEventListener("submit", function (e) {
+    if (!window.fetch) return;
+    e.preventDefault();
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.textContent = "";
+    status.classList.remove("error");
+    fetch("https://formsubmit.co/ajax/hello@swayo.ai", {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form)
+    })
+      .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+      .then(function (r) {
+        if (!r.ok || String(r.data.success) !== "true") throw new Error(r.data.message || "Send failed");
+        form.reset();
+        showSent();
+      })
+      .catch(function () {
+        status.textContent = "Sorry, that didn't go through. Please try again, or email us at hello@swayo.ai.";
+        status.classList.add("error");
+      })
+      .finally(function () {
+        button.disabled = false;
+        button.textContent = "Send message";
+      });
+  });
+})();
+</script>
+</body>
+</html>
